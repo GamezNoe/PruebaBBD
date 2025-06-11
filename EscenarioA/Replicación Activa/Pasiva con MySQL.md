@@ -41,11 +41,11 @@ SHOW MASTER STATUS;
 
 #### 7. Configuramos la replicación en el esclavo
 CHANGE MASTER TO
-  MASTER_HOST='IP_MAESTRO',
+  MASTER_HOST='10.0.0.7',
   MASTER_USER='replicator',
   MASTER_PASSWORD='claveSegura',
   MASTER_LOG_FILE='mysql-bin.000001',
-  MASTER_LOG_POS=XXX;
+  MASTER_LOG_POS=5269;
 
 START SLAVE;
 
